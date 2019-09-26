@@ -12,7 +12,7 @@ const app = express()
   .set('view engine', 'ejs')
 
 // Static public files
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'images')))
 
 app.get('/', function(req, res) {
   res.send('Arboribus Metadata API Service');

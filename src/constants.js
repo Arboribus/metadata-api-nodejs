@@ -1,4 +1,4 @@
-const HOST = 'https://birthstamps.herokuapp.com'
+const HOST = 'https://api.arboribus.network/images/'
 
 module.exports = {
   HOST
