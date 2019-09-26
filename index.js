@@ -12,7 +12,7 @@ const app = express()
   .set('view engine', 'ejs')
 
 // Static public files
-app.use(express.static(path.join(__dirname, 'images')))
+app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', function(req, res) {
   res.send('Arboribus Metadata API Service');
@@ -26,7 +26,7 @@ app.get('/arbol/:token_id', function(req, res) {
     'attributes': {
       'capture': arbol.capture
     },
-    'image': `${HOST}/images/${tokenId}.png`
+    'image': `${HOST}/arbol/${tokenId}.jpg`
   }
   res.send(data)
 })
